@@ -38,9 +38,9 @@ df[normalize_cols] = scaler_minmax.fit_transform(df[normalize_cols])
 categorical_cols = ['street', 'weekday']
 df = pd.get_dummies(df, columns=categorical_cols)
 
-# ✅ 将所有 bool 列转成 int（True/False → 1/0）
+# 将所有 bool 列转成 int（True/False → 1/0）
 df = df.astype({col: int for col in df.columns if df[col].dtype == 'bool'})
 
 # 保存处理后数据
 df.to_csv(output_path, index=False)
-print("✅ 数据预处理完成，文件已保存至：", output_path)
+print("数据预处理完成，文件已保存至：", output_path)

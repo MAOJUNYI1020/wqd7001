@@ -133,7 +133,7 @@ def save_combined_canvas(plots, out_file, cols=4):
     plt.tight_layout()
     plt.savefig(out_file, dpi=300)
     plt.close()
-    print(f"✅ 合并图保存成功：{out_file}")
+    print(f"合并图保存成功：{out_file}")
 
 # ======= 单独生成 Pairplot 图 =======
 def generate_pairplot(df, output_path):
@@ -142,7 +142,7 @@ def generate_pairplot(df, output_path):
     sns.pairplot(df_pair)
     plt.savefig(output_path, dpi=300)
     plt.close()
-    print(f"✅ Pairplot 图已保存：{output_path}")
+    print(f"Pairplot 图已保存：{output_path}")
 
 # ======= 主执行逻辑 =======
 generate_pairplot(df, os.path.join(output_dir, "pairplot_features.png"))

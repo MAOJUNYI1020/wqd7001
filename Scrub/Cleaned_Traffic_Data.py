@@ -50,4 +50,4 @@ df = pd.DataFrame(all_records)
 # 保存为 CSV 文件
 df.to_csv(output_file, index=False, encoding='utf-8-sig')
 
-print(f"✅ 已完成清洗并保存为：{output_file}")
+print(f"已完成清洗并保存为：{output_file}")
