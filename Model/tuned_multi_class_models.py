@@ -8,6 +8,8 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
 import warnings
+from joblib import dump
+
 warnings.filterwarnings("ignore")
 
 # 1. 读取数据
@@ -87,3 +89,7 @@ plt.savefig(output_path / "cm_neural_network_tuned.png")
 plt.close()
 
 print("所有调参后的模型已训练完成，混淆矩阵图保存至 ./Model 文件夹。")
+
+dump(rf_model, "rf_model.pkl")
+
+print("模型已保存为 rf_model.pkl")
